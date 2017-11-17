@@ -4,11 +4,10 @@
 if ps -p $(cat twistd.pid) > /dev/null 2>&1
 then
     kill $(cat twistd.pid)
-    rm -rf twistd.pid
 else
     echo "no twistd.pid found"   
 fi
-
+rm -rf twistd.pid
 # remove pid file if it exists
 if [ -e "/var/run/openvpnas.pid" ]; then
   rm -f "/var/run/openvpnas.pid" &>/dev/null
