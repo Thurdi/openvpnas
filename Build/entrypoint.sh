@@ -8,7 +8,7 @@ else
     echo "no twistd.pid found"   
 fi
 
-if [ -e "/var/run/openvpnas.pid" ]; then
+if [ -e "/twistd.pid" ]; then
     rm -rf twistd.pid &>/dev/null
 fi
 
