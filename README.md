@@ -3,11 +3,11 @@ This is an Openvpn Access server running inside a Ubuntu 16.04 Docker container
 
 ##COMMAND TO BUILD
 
-sudo docker run -d -p 443:443 -p 943:943 -p 1194:1194/udp --privileged=true --name openvpnas openvpnas
+sudo docker run -d -p 443:443 -p 943:943 -p 1194:1194/udp --privileged=true --name --restart unless-stopped openvpnas openvpnas
 
 ##COMMAND TO RESTART
 
-sudo docker exec -d -it \`sudo docker start <container_ID>\` ./entrypoint.sh
+sudo docker start openvpnas
 
 ##COMMAND TO CHANGE DEFAULT USER PASSWORD
 
